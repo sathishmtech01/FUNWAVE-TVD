@@ -2,7 +2,7 @@ download https://github.com/fengyanshi/FUNWAVE-TVD/releases
 csk@csk-ai-revolution:~/Downloads$ uzip FUNWAVE-TVD-Version_3.3.zip
 csk@csk-ai-revolution:~$ sudo apt-get install libopenmpi-dev
 csk@csk-ai-revolution:~$ sudo apt-get install gfortran
-
+csk@csk-ai-revolution:~/Downloads/FUNWAVE-TVD-Version_3.3/src$ make clean
 csk@csk-ai-revolution:~/Downloads/FUNWAVE-TVD-Version_3.3/src$ make
 /usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 mod_param.F > mod_param.f90
 mpif90  -c     mod_param.f90
