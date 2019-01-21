@@ -1,0 +1,4 @@
+download https://github.com/fengyanshi/FUNWAVE-TVD/releases
+csk@csk-ai-revolution:~$ wget https://github.com/fengyanshi/FUNWAVE-TVD/archive/Version_3.3.zip
+csk@csk-ai-revolution:~$ sudo apt-get install libopenmpi-dev
+csk@csk-ai-revolution:~$ sudo apt-get install gfortran
