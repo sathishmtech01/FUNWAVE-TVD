@@ -2,3 +2,161 @@ download https://github.com/fengyanshi/FUNWAVE-TVD/releases
 csk@csk-ai-revolution:~$ wget https://github.com/fengyanshi/FUNWAVE-TVD/archive/Version_3.3.zip
 csk@csk-ai-revolution:~$ sudo apt-get install libopenmpi-dev
 csk@csk-ai-revolution:~$ sudo apt-get install gfortran
+
+csk@csk-ai-revolution:~/Downloads/FUNWAVE-TVD-Version_3.3/src$ make
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 mod_param.F > mod_param.f90
+mpif90  -c     mod_param.f90
+/bin/rm mod_param.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 mod_global.F > mod_global.f90
+mpif90  -c     mod_global.f90
+/bin/rm mod_global.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 mod_input.F > mod_input.f90
+mpif90  -c     mod_input.f90
+/bin/rm mod_input.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 mod_vessel.F > mod_vessel.f90
+mpif90  -c     mod_vessel.f90
+/bin/rm mod_vessel.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 mod_bathy_correction.F > mod_bathy_correction.f90
+mpif90  -c     mod_bathy_correction.f90
+/bin/rm mod_bathy_correction.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 mod_meteo.F > mod_meteo.f90
+mpif90  -c     mod_meteo.f90
+/bin/rm mod_meteo.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 mod_parallel_field_io.F > mod_parallel_field_io.f90
+mpif90  -c     mod_parallel_field_io.f90
+/bin/rm mod_parallel_field_io.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 main.F > main.f90
+mpif90  -c     main.f90
+/bin/rm main.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 bc.F > bc.f90
+mpif90  -c     bc.f90
+/bin/rm bc.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 fluxes.F > fluxes.f90
+mpif90  -c     fluxes.f90
+/bin/rm fluxes.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 init.F > init.f90
+mpif90  -c     init.f90
+/bin/rm init.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 io.F > io.f90
+mpif90  -c     io.f90
+/bin/rm io.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 tridiagnal.F > tridiagnal.f90
+mpif90  -c     tridiagnal.f90
+/bin/rm tridiagnal.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 breaker.F > breaker.f90
+mpif90  -c     breaker.f90
+/bin/rm breaker.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 derivatives.F > derivatives.f90
+mpif90  -c     derivatives.f90
+/bin/rm derivatives.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 dispersion.F > dispersion.f90
+mpif90  -c     dispersion.f90
+/bin/rm dispersion.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 etauv_solver.F > etauv_solver.f90
+mpif90  -c     etauv_solver.f90
+/bin/rm etauv_solver.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 sponge.F > sponge.f90
+mpif90  -c     sponge.f90
+/bin/rm sponge.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 sources.F > sources.f90
+mpif90  -c     sources.f90
+/bin/rm sources.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 masks.F > masks.f90
+mpif90  -c     masks.f90
+/bin/rm masks.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 parallel.F > parallel.f90
+mpif90  -c     parallel.f90
+/bin/rm parallel.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 statistics.F > statistics.f90
+mpif90  -c     statistics.f90
+/bin/rm statistics.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 wavemaker.F > wavemaker.f90
+mpif90  -c     wavemaker.f90
+/bin/rm wavemaker.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 mixing.F > mixing.f90
+mpif90  -c     mixing.f90
+/bin/rm mixing.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 nesting.F > nesting.f90
+mpif90  -c     nesting.f90
+/bin/rm nesting.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 misc.F > misc.f90
+mpif90  -c     misc.f90
+/bin/rm misc.f90
+/usr/bin/cpp  -P -traditional  -P -traditional  -DDOUBLE_PRECISION  -DPARALLEL  -DCARTESIAN    -DCOUPLING                 samples.F > samples.f90
+mpif90  -c     samples.f90
+/bin/rm samples.f90
+mpif90     -o funwave_vessel mod_param.o mod_global.o mod_input.o mod_vessel.o mod_bathy_correction.o mod_meteo.o mod_parallel_field_io.o main.o bc.o fluxes.o init.o io.o tridiagnal.o breaker.o derivatives.o dispersion.o etauv_solver.o sponge.o sources.o masks.o parallel.o statistics.o wavemaker.o mixing.o nesting.o misc.o samples.o 
+
+
+csk@csk-ai-revolution:~/Downloads/FUNWAVE-TVD-Version_3.3/simple_cases/vessel_island_beach$ /home/csk/Downloads/FUNWAVE-TVD-Version_3.3/src/funwave_vessel input.txt
+ BATHY_CORRECTION DOES NOT EXIST. USE DEFAULT VALUE
+ INI_UVZ DOES NOT EXIST. USE DEFAULT VALUE
+ WaterLevel DOES NOT EXIST. USE DEFAULT VALUE
+ WAVEMAKER DOES NOT EXIST. USE DEFAULT VALUE
+                            No WaveMaker
+ ETA_LIMITER DOES NOT EXIST. USE DEFAULT VALUE
+ EqualEnergy DOES NOT EXIST. USE DEFAULT VALUE
+ PERIODIC DOES NOT EXIST. USE DEFAULT VALUE
+ DIFFUSION_SPONGE DOES NOT EXIST. USE DEFAULT VALUE
+ DIRECT_SPONGE DOES NOT EXIST. USE DEFAULT VALUE
+ FRICTION_SPONGE DOES NOT EXIST. USE DEFAULT VALUE
+ WaveMakerCd DOES NOT EXIST. USE DEFAULT VALUE
+ OBSTACLE_FILE DOES NOT EXIST. USE DEFAULT VALUE
+ BREAKWATER_FILE DOES NOT EXIST. USE DEFAULT VALUE
+ BreakWaterAbsorbCoef DOES NOT EXIST. USE DEFAULT VALUE
+     BreakWaterAbsorbCoef Default:  10.0
+ DISPERSION DOES NOT EXIST. USE DEFAULT VALUE
+         DISPERSION Default:  DISPERSION
+ Gamma1 DOES NOT EXIST. USE DEFAULT VALUE
+        Gamma1 Default:  1.0: DISPERSION
+ Gamma2 DOES NOT EXIST. USE DEFAULT VALUE
+              Gamma2 Default:  1.0: Full nonlinear
+ Beta_ref DOES NOT EXIST. USE DEFAULT VALUE
+               Beta_ref Default:  -0.531
+ Gamma3 DOES NOT EXIST. USE DEFAULT VALUE
+                      Gamma3 Default:  1.0: NOT fully linear
+ VISCOSITY_BREAKING DOES NOT EXIST. USE DEFAULT VALUE
+                   VISCOSITY_BREAKING Default:  SWE Breaking
+ SWE_ETA_DEP DOES NOT EXIST. USE DEFAULT VALUE
+               SWE_ETA_DEP Default:  0.8
+ Friction_Matrix DOES NOT EXIST. USE DEFAULT VALUE
+             Friction_Matrix Default:  constant Cd
+ Cd DOES NOT EXIST. USE DEFAULT VALUE
+                  Cd_fixed Default:  0.0
+ Time_Scheme DOES NOT EXIST. USE DEFAULT VALUE
+       Time_Scheme Default:  Runge_Kutta
+ CONSTRUCTION DOES NOT EXIST. USE DEFAULT VALUE
+ HIGH_ORDER DOES NOT EXIST. USE DEFAULT VALUE
+  HIGH_ORDER                     NOT DEFINED, USE FOURTH-ORDER
+ CFL DOES NOT EXIST. USE DEFAULT VALUE
+                       CFL Default:  0.5
+ DT_fixed DOES NOT EXIST. USE DEFAULT VALUE
+ FroudeCap DOES NOT EXIST. USE DEFAULT VALUE
+                 FroudeCap Default:  3.0
+ MinDepth DOES NOT EXIST. USE DEFAULT VALUE
+                MinDepth Default:  0.1 m
+ MinDepthFrc DOES NOT EXIST. USE DEFAULT VALUE
+             MinDepthFrc Default:  0.1 m
+ SHOW_BREAKING DOES NOT EXIST. USE DEFAULT VALUE
+            SHOW_BREAKING Default:  TRUE
+ Cbrk1 DOES NOT EXIST. USE DEFAULT VALUE
+                    Cbrk1 Default:  0.65
+ Cbrk2 DOES NOT EXIST. USE DEFAULT VALUE
+                    Cbrk2 Default:  0.35
+ WAVEMAKER_Cbrk DOES NOT EXIST. USE DEFAULT VALUE
+            WAVEMAKER_Cbrk Default:  1.0
+ WAVEMAKER_VIS DOES NOT EXIST. USE DEFAULT VALUE
+           WAVEMAKER_VIS Default:  FALSE
+ T_INTV_mean DOES NOT EXIST. USE DEFAULT VALUE
+             T_INTV_mean Default:  LARGE
+ STEADY_TIME DOES NOT EXIST. USE DEFAULT VALUE
+             STEADY_TIME Default:  LARGE
+ C_smg DOES NOT EXIST. USE DEFAULT VALUE
+                     C_smg Default:  0.0
+ nu_bkg DOES NOT EXIST. USE DEFAULT VALUE
+                    nu_bkg Default:  0.0
+ COUPLING_FILE DOES NOT EXIST. USE DEFAULT VALUE
+                     You use coupling option, specify COUPLING_FILE in input.txt
+csk@csk-ai-revolution:~/Downloads/FUNWAVE-TVD-Version_3.3/simple_cases/vessel_island_beach$ ls
+depth.txt  input.txt  LOG.txt  postprocessing  time_dt.out  vessel_00001
+csk@csk-ai-revolution:~/Downloads/FUNWAVE-TVD-Version_3.3/simple_cases/vessel_island_beach$ nano LOG.txt 
