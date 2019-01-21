@@ -1,5 +1,5 @@
 download https://github.com/fengyanshi/FUNWAVE-TVD/releases
-csk@csk-ai-revolution:~$ wget https://github.com/fengyanshi/FUNWAVE-TVD/archive/Version_3.3.zip
+csk@csk-ai-revolution:~/Downloads$ uzip FUNWAVE-TVD-Version_3.3.zip
 csk@csk-ai-revolution:~$ sudo apt-get install libopenmpi-dev
 csk@csk-ai-revolution:~$ sudo apt-get install gfortran
 
@@ -160,3 +160,121 @@ csk@csk-ai-revolution:~/Downloads/FUNWAVE-TVD-Version_3.3/simple_cases/vessel_is
 csk@csk-ai-revolution:~/Downloads/FUNWAVE-TVD-Version_3.3/simple_cases/vessel_island_beach$ ls
 depth.txt  input.txt  LOG.txt  postprocessing  time_dt.out  vessel_00001
 csk@csk-ai-revolution:~/Downloads/FUNWAVE-TVD-Version_3.3/simple_cases/vessel_island_beach$ nano LOG.txt 
+
+
+-------------- LOG FILE -----------------
+ VESSEL
+  --------------input start --------------
+
+ -------------- PARALLEL -----------------
+ PX   =  4 PY   =  1
+
+ -------------- GRID INFO -----------------
+ Mglob=     500 Nglob=     100
+ DX=        1.00 DY=        1.00
+ DEPTH_TYPE:FLAT
+DEPTH_FLAT       10.00
+
+ -------------- TIME INFO -----------------
+ TOTAL_TIME=       50.00
+ PLOT_INTV=         1.00
+ SCREEN_INTV=        1.00
+
+ -------------- HOT START -----------------
+
+ -------------- STILL WATER INFO -----------------
+       WaterLevel =      0.00000
+
+ -------------- WAVEMAKER -----------------
+                            No WaveMaker
+ WAVEMAKER:nothing
+          EqualEnergy NOT USED in frequency domain
+
+ -------------- PERIODIC BC -----------------
+  PERIODIC: F
+
+ -------------- SPONGE -----------------
+              No WavemakerCurrentBalance
+
+ -------- OBSTACLE and BREAKWATER -----------------
+ OBSTACLE_FILE:   NO
+    BREAKWATER_FILE:   NO
+     BreakWaterAbsorbCoef Default:  10.0
+
+ -------------- PHYSICS -----------------
+         DISPERSION Default:  DISPERSION
+        Gamma1 Default:  1.0: DISPERSION
+              Gamma2 Default:  1.0: Full nonlinear
+               Beta_ref Default:  -0.531
+                      Gamma3 Default:  1.0: NOT fully linear
+  Summary of Physics
+  Gamma1 =         1.00
+ Gamma2 =         1.00
+Beta_ref=        -0.53
+ Gamma3 =         1.00
+                   VISCOSITY_BREAKING Default:  SWE Breaking
+               SWE_ETA_DEP Default:  0.8
+ SWE_ETA_DEP=        0.80
+             Friction_Matrix Default:  constant Cd
+                  Cd_fixed Default:  0.0
+Cd_fixed             0.00
+
+ -------------- NUMERICS -----------------
+       Time_Scheme Default:  Runge_Kutta
+ TIME_SCHEME:Runge_Kutta
+  CONSTRUCTION                              NOT DEFINED, USE HLL
+ CONSTRUCTION:HLLC
+  HIGH_ORDER                     NOT DEFINED, USE FOURTH-ORDER
+ HIGH_ORDER:FOURTH
+                       CFL Default:  0.5
+ CFL=        0.50
+                 FroudeCap Default:  3.0
+  FroudeCap=        3.00
+                MinDepth Default:  0.1 m
+             MinDepthFrc Default:  0.1 m
+
+Beta_ref=        -0.53
+ Gamma3 =         1.00
+                   VISCOSITY_BREAKING Default:  SWE Breaking
+               SWE_ETA_DEP Default:  0.8
+ SWE_ETA_DEP=        0.80
+             Friction_Matrix Default:  constant Cd
+                  Cd_fixed Default:  0.0
+Cd_fixed             0.00
+
+ -------------- NUMERICS -----------------
+       Time_Scheme Default:  Runge_Kutta
+ TIME_SCHEME:Runge_Kutta
+  CONSTRUCTION                              NOT DEFINED, USE HLL
+ CONSTRUCTION:HLLC
+  HIGH_ORDER                     NOT DEFINED, USE FOURTH-ORDER
+ HIGH_ORDER:FOURTH
+                       CFL Default:  0.5
+ CFL=        0.50
+                 FroudeCap Default:  3.0
+  FroudeCap=        3.00
+                MinDepth Default:  0.1 m
+             MinDepthFrc Default:  0.1 m
+          USE MIN(MinDepthFrc, MinDepth)
+ MinDepth=    0.100000
+ MinDepthFrc=    0.100000
+
+ --------- WAVE BREAKING -----------------
+            SHOW_BREAKING Default:  TRUE
+                    Cbrk1 Default:  0.65
+                    Cbrk2 Default:  0.35
+            WAVEMAKER_Cbrk Default:  1.0
+  WAVEMAKER_Cbrk =         1.000000
+           WAVEMAKER_VIS Default:  FALSE
+
+ -------- WAVE-AVERAGED PROPERTY -----------------
+             T_INTV_mean Default:  LARGE
+             STEADY_TIME Default:  LARGE
+                     C_smg Default:  0.0
+ T_INTV_mean =************
+ STEADY_TIME =************
+ C_smg =    0.000000
+                    nu_bkg Default:  0.0
+
+ -------------- COUPLING -----------------
+                     You use coupling option, specify COUPLING_FILE in input.txt
